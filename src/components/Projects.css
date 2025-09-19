@@ -1,0 +1,399 @@
+/* Additional coding lines pattern for right page */
+.right-page::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 30px,
+      rgba(162, 89, 255, 0.02) 30px,
+      rgba(162, 89, 255, 0.02) 31px
+    );
+  pointer-events: none;
+  border-radius: 0 12px 12px 0;
+  z-index: 0;
+}.projects-section {
+  padding: 120px 20px;
+  background: #0c0c0c;
+  color: #fff;
+  text-align: center;
+  perspective: 1500px; /* Added for 3D effect */
+}
+
+.section-header h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-header h2 span {
+  color: #a259ff;
+}
+
+.section-header p {
+  color: #aaa;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Realistic Book Container */
+.book-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Book Layout with 3D Effect */
+.book {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 75%;
+  max-width: 700px;
+  height: 550px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+      margin-left: 250px;
+
+}
+
+.book:hover {
+  transform: rotateY(-5deg) rotateX(2deg) scale(1.02);
+}
+
+/* Book Base/Cover */
+.book::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background: linear-gradient(135deg, #2d1b0f 0%, #1a0f0a 50%, #0f0706 100%);
+  border-radius: 16px;
+  z-index: -2;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.8),
+    0 5px 15px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform: translateZ(-10px);
+   
+}
+
+/* Book Spine */
+.book::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    #8b4513 0%,
+    #654321 25%,
+    #3d2814 50%,
+    #654321 75%,
+    #8b4513 100%
+  );
+  transform: translateX(-50%) translateZ(5px);
+  z-index: 10;
+  border-radius: 2px;
+  box-shadow: 
+    -2px 0 4px rgba(0, 0, 0, 0.5),
+    2px 0 4px rgba(0, 0, 0, 0.5),
+    inset 0 0 2px rgba(255, 255, 255, 0.1);
+
+   
+}
+
+/* Individual Pages */
+.page {
+  flex: 1;
+  padding: 50px 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  transition: all 0.4s ease;
+}
+
+/* Coding Watermarks */
+.coding-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+  color: rgba(0, 0, 0, 0.08);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+  letter-spacing: 2px;
+  word-spacing: 8px;
+  line-height: 1.8;
+}
+
+.left-watermark {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.right-watermark {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Coding Lines */
+.coding-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.horizontal-lines {
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 25px,
+      rgba(162, 89, 255, 0.02) 25px,
+      rgba(162, 89, 255, 0.02) 26px
+    );
+  border-radius: 12px 0 0 12px;
+}
+
+.vertical-lines {
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 30px,
+      rgba(162, 89, 255, 0.02) 30px,
+      rgba(162, 89, 255, 0.02) 31px
+    );
+  border-radius: 0 12px 12px 0;
+}
+
+/* Left Page Styling */
+.left-page {
+  background: linear-gradient(135deg, #fefcf8 0%, #faf7f2 50%, #f5f1eb 100%);
+  color: #2c2c2c;
+  text-align: left;
+  border-radius: 12px 0 0 12px;
+  box-shadow: 
+    inset 3px 0 10px rgba(0, 0, 0, 0.08),
+    inset 0 0 30px rgba(139, 69, 19, 0.02);
+  transform: translateZ(2px);
+  border-right: 1px solid rgba(139, 69, 19, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.left-page h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+  font-weight: 700;
+  border-bottom: 2px solid #a259ff;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.left-page p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  text-align: justify;
+  font-family: Georgia, serif;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #a259ff 0%, #7a3acc 100%);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  font-weight: 600;
+  box-shadow: 
+    0 4px 15px rgba(162, 89, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(0);
+}
+
+.project-link:hover {
+  background: linear-gradient(135deg, #7a3acc 0%, #5d2a99 100%);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 25px rgba(162, 89, 255, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Right Page Styling */
+.right-page {
+  background: linear-gradient(225deg, #fefcf8 0%, #faf7f2 50%, #f5f1eb 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 12px 12px 0;
+  box-shadow: 
+    inset -3px 0 10px rgba(0, 0, 0, 0.08),
+    inset 0 0 30px rgba(139, 69, 19, 0.02);
+  transform: translateZ(2px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Coding watermark for right page */
+.right-page::before {
+  content: 'console.log("Hello World"); <html> <body> <script> import React from "react"; </script>';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+  color: rgba(14, 14, 14, 0.08);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+  letter-spacing: 2px;
+  word-spacing: 8px;
+  line-height: 1.8;
+}
+
+/* Ensure content appears above watermarks */
+.left-page h3,
+.left-page p,
+.project-link {
+  position: relative;
+  z-index: 10;
+}
+
+.right-page img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 12px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  transform: translateZ(5px);
+  position: relative;
+  z-index: 10;
+}
+
+.right-page img:hover {
+  transform: translateZ(15px) scale(1.02);
+  box-shadow: 
+    0 15px 50px rgba(0, 0, 0, 0.4),
+    0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Page turning effect on hover */
+.book:hover .left-page {
+  transform: translateZ(5px) rotateY(-1deg);
+  box-shadow: 
+    inset 5px 0 15px rgba(0, 0, 0, 0.15),
+    -5px 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.book:hover .right-page {
+  transform: translateZ(5px) rotateY(1deg);
+  box-shadow: 
+    inset -5px 0 15px rgba(0, 0, 0, 0.15),
+    5px 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .book {
+    flex-direction: column;
+    height: auto;
+    max-width: 500px;
+  }
+
+  .book:hover {
+    transform: scale(1.02);
+  }
+
+  .book::after {
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    transform: translateY(-50%);
+  }
+
+  .left-page {
+    border-radius: 12px 12px 0 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+    text-align: center;
+    min-height: 300px;
+  }
+
+  .left-page::after {
+    display: none;
+  }
+
+  .right-page {
+    border-radius: 0 0 12px 12px;
+    min-height: 300px;
+  }
+
+  .page {
+    padding: 40px 30px;
+  }
+
+  .left-page h3 {
+    font-size: 1.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .book:hover .left-page,
+  .book:hover .right-page {
+    transform: translateZ(2px);
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 30px 20px;
+  }
+
+  .left-page h3 {
+    font-size: 1.3rem;
+  }
+
+  .left-page p {
+    font-size: 0.95rem;
+  }
+
+  .book {
+    max-width: 90%;
+  }
+}
