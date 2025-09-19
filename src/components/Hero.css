@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Logo */
+
+.portfolio-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;              /* align to left */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-start;  /* push content to left */
+  align-items: center;
+  z-index: 1000;        /* stays above content */
+  background: transparent;
+}
+
+.portfolio-logo {
+  height: 100px;   /* adjust as needed */
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-logo:hover {
+  transform: scale(1.1); /* subtle hover zoom */
+}
+
+
+
+
+/* Hero Container */
+.hero-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #0a0a0a;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+}
+
+/* Navbar */
+
+
+/* Social Sidebar */
+.social-sidebar {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  z-index: 10;
+}
+
+.social-icon {
+  font-size: 2rem;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #00ffff;
+  transform: scale(1.2) rotateY(20deg);
+}
+
+.glow-line {
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(180deg, #00ffff, #00ffff00);
+  box-shadow: 0 0 10px #00ffff;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.2);
+    filter: brightness(1.5);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+.social-icon {
+  font-size: 2rem;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+  animation: pulse 1.5s infinite;
+}
+
+.social-icon:hover {
+  color: #00ffff;
+  transform: scale(1.3) rotateY(20deg); /* keeps your hover 3D effect */
+  animation: none; /* optional: stop pulsing on hover */
+}
+
+
+/* Header Left Section */
+.header-left {
+  position: absolute;
+  top: 50%;
+  left: 120px; /* offset to the right of sidebar */
+  transform: translateY(-50%);
+  max-width: 500px;
+  z-index: 10;
+}
+
+.welcome-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem;
+  color: #00ffff;
+  margin-bottom: 10px;
+}
+
+.hero-name {
+  font-family: 'Space Mono', monospace;
+  font-size: 2.5rem; /* slightly smaller */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-tagline {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem; /* bigger for emphasis */
+  line-height: 1.6;
+  color: #ccc;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+/* Button Background */

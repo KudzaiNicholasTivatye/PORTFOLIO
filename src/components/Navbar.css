@@ -1,0 +1,79 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+}
+
+.nav-list {
+  position: relative;
+  display: flex;
+  list-style: none;
+ 
+  border-radius: 50px;
+  overflow: hidden;
+    min-height: 10px;
+  /* 🌟 Glassmorphism Effect */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.nav-item {
+  flex: 1;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #e2dbdb;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-item.active,
+.nav-item:hover {
+  color: #ffffff;
+}
+
+/* 🌟 Pill hover indicator */
+.nav-indicator {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  width: 0; /* dynamically set with JS or CSS variables */
+  left: 0;
+  background: linear-gradient(135deg, #3a8dff, #005dff);
+  border-radius: 50px;
+  transition: all 0.4s ease;
+  z-index: 0;
+  box-shadow: 0 0 15px rgba(0, 93, 255, 0.6);
+}
+
+/* Optional: Smooth width effect when hovering */
+.nav-item:hover ~ .nav-indicator {
+  width: 100%; /* makes it pill shape under the hovered item */
+}
+
+.nav-icon {
+  font-size: 18px;
+}
+
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit; /* keeps the text color */
+  width: 100%;
+  height: 100%;
+}

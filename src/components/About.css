@@ -1,0 +1,381 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+
+/* ===========================
+   GLOBAL WRAPPER
+   =========================== */
+.about-experience {
+  background: linear-gradient(180deg, #0a0f2c 0%, #000 100%);
+  color: #fff;
+
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===========================
+   ABOUT SECTION
+   =========================== */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto 9rem auto;
+  gap: 3rem;
+
+}
+
+.about-image {
+  position: relative;
+  display: inline-block;
+  margin-top: 90px;
+}
+
+.about-image img {
+  width: 220px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  z-index: 2;
+  position: relative;
+}
+
+.about-image .image-border {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #4cc9f0;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #4cc9f0;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 650px;
+  margin: 0 auto;
+  color: #d0d0d0;
+}
+
+.about-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.hire {
+  background: linear-gradient(90deg, #4cc9f0, #4361ee);
+  color: white;
+}
+
+.hire:hover {
+  opacity: 0.85;
+}
+
+.resume {
+  background: transparent;
+  border: 2px solid #4cc9f0;
+  color: white;
+}
+
+.resume:hover {
+  background: #4cc9f0;
+  color: #0a0f2c;
+}
+
+/* ===========================
+   EXPERIENCE SECTION
+   =========================== */
+.experience-section {
+  text-align: center;
+  padding: 200px 20px;
+  background: #0c0c0c;
+  color: #fff;
+}
+
+.section-label {
+  display: inline-block;
+  padding: 5px 15px;
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.experience-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.experience-section h2 span {
+  color: #a259ff;
+}
+
+.section-subtitle {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: #aaa;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  background: #1a1a1a;
+  padding: 6px;
+  border-radius: 50px;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  border: none;
+  background: transparent;
+  border-radius: 25px;
+  color: #aaa;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tabs button.active {
+  background: #fff;
+  color: #000;
+}
+
+/* Tab Content */
+.tab-content-container {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===========================
+   TIMELINE STYLING
+   =========================== */
+.timeline-item {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.timeline-left {
+  min-width: 250px;
+  text-align: right;
+  padding-right: 2rem;
+  border-right: 2px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  margin-left: 300px;
+}
+
+.timeline-left::after {
+  content: "";
+  position: absolute;
+  right: -7px;
+  top: 12px;
+  width: 12px;
+  height: 12px;
+  background: #4cc9f0;
+  border-radius: 50%;
+}
+
+.timeline-date {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  background: #111;
+  color: #fff;
+}
+
+.timeline-left h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.3rem 0;
+}
+
+.timeline-left .company {
+  font-size: 0.95rem;
+  color: #b57cff;
+}
+
+.timeline-right {
+  flex: 1;
+}
+
+.timeline-right p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #d0d0d0;
+  margin-bottom: 1rem;
+  margin-right: 100px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skills span {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.8rem;
+  background: #1a1a1a;
+  border-radius: 999px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s;
+}
+
+.skills span:hover {
+  background: #4cc9f0;
+  color: #0a0f2c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+  }
+
+  .timeline-left {
+    text-align: left;
+    border-right: none;
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    padding-left: 1.5rem;
+    padding-right: 0;
+  }
+
+  .timeline-left::after {
+    left: -7px;
+    right: auto;
+  }
+}
+
+.achievement-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+  text-align: center;
+  color: #00f0ff;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.holo-base {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, #0ff 0%, #002233 100%);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 30px #00f0ff;
+}
+
+.holo-beam {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to top, transparent, #00f0ff);
+  animation: pulse 2s infinite;
+}
+
+.holo-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 180px;
+  height: 120px;
+  background: rgba(0, 255, 255, 0.1);
+  border: 2px solid #00f0ff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00f0ff;
+  padding: 10px;
+}
+
+.holo-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.achievement-title {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  text-shadow: 0 0 5px #00f0ff;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+    height: 100%;
+  }
+  50% {
+    opacity: 1;
+    height: 120%;
+  }
+}
+
+
