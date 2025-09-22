@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CertificateCard from "./CertificateCard"; // adjust path as needed
 import "./About.css";
+import Navbar from "./Navbar";
 import logo from "../assets/logo.png"; // replace with your own profile image
 import { FaHtml5, FaCss3Alt, FaSass, FaJs, FaReact, FaNodeJs, FaPython, FaGithub } from "react-icons/fa";
 import { SiTailwindcss, SiTypescript, SiNextdotjs, SiSupabase } from "react-icons/si";
@@ -10,6 +11,11 @@ const About = () => {
 
   return (
     <section className="about-experience">
+
+         {/* ===== navbar SECTION ===== */}
+         <Navbar /> 
+
+
       {/* ===== ABOUT SECTION ===== */}
       <div className="about">
         <div className="about-container">

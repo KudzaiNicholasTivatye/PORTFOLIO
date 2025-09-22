@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaHome, FaUser, FaFolderOpen, FaEnvelope } from "react-icons/fa";
-import { Link } from "react-router-dom"; // ✅ Import Link
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const location = useLocation();
 
   const menuItems = [
     { label: "Home", icon: <FaHome />, path: "/" },
@@ -13,10 +13,13 @@ const Navbar = () => {
     { label: "Contact", icon: <FaEnvelope />, path: "/contact" },
   ];
 
+  // find the active index by comparing the current location
+  const activeIndex = menuItems.findIndex((item) => item.path === location.pathname);
+
   return (
     <nav className="navbar">
       <ul className="nav-list">
-        {/* moving background indicator */}
+        {/* Pill indicator */}
         <div
           className="nav-indicator"
           style={{
@@ -28,7 +31,6 @@ const Navbar = () => {
           <li
             key={index}
             className={`nav-item ${activeIndex === index ? "active" : ""}`}
-            onClick={() => setActiveIndex(index)}
           >
             <Link to={item.path} className="nav-link">
               <span className="nav-icon">{item.icon}</span>
