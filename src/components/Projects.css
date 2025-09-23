@@ -1,8 +1,33 @@
+.projects-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff; /* white text */
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.5px;
+}
+
+.projects-subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  max-width: 650px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.75); /* softer white */
+  line-height: 1.6;
+}
+
+
+
+
+
 .projects-section {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  padding: 4rem 2rem;
   background: #0a0f1f;
   color: #fff;
 }
@@ -15,6 +40,7 @@
   flex-wrap: wrap;
   padding-bottom: 3rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-left: 100px;
 }
 
 /* LEFT SIDE */

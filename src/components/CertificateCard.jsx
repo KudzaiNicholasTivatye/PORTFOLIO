@@ -1,45 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CertificateCard.css";
-import logo from "../assets/logo.png";
-import { FiArrowRight } from "react-icons/fi";
+import { FiArrowRight, FiX } from "react-icons/fi";
 
-const CertificateCard = () => {
+const CertificateCard = ({ image, name, title, link }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="certificate-container">
-      {/* Top Join Us Button */}
-      
-
-      {/* Main Certificate Section */}
-      <div className="certificate-box">
-      <img src={logo} alt="Profile" />
-      </div>
-
-      {/* Bottom Profile Info */}
-      <div className="profile-card">
-        <img
-          src="/profile.jpg" // replace with your profile picture
-          alt="Profile"
-          className="profile-img"
-        />
-        <div className="profile-text">
-          <h4>Your Name</h4>
-          <p>Certified [Your Field]</p>
+    <>
+      <div className="certificate-container">
+        {/* Main Certificate Section */}
+        <div className="certificate-box" onClick={() => setIsOpen(true)}>
+          <img src={image} alt="Certificate" className="certificate-img" />
         </div>
-        
-<button
-  className="arrow-btn"
-  onClick={() =>
-    window.open(
-      "https://www.linkedin.com/in/kudzai-nicholas-tivatye-00498533a",
-      "_blank",
-      "noopener,noreferrer"
-    )
-  }
->
-  <FiArrowRight />
-</button>
+
+        {/* Bottom Profile Info */}
+        <div className="profile-card">
+          <img
+            src="/profile.jpg" // replace with your profile picture
+            alt="Profile"
+            className="profile-img"
+          />
+          <div className="profile-text">
+            <h4>{name}</h4>
+            <p>{title}</p>
+          </div>
+
+          <button
+            className="arrow-btn"
+            onClick={() => window.open(link, "_blank", "noopener,noreferrer")}
+          >
+            <FiArrowRight />
+          </button>
+        </div>
       </div>
-    </div>
+
+      {/* Fullscreen Modal */}
+      {isOpen && (
+        <div className="certificate-modal" onClick={() => setIsOpen(false)}>
+          <div className="certificate-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-btn" onClick={() => setIsOpen(false)}>
+              <FiX />
+            </button>
+            <img src={image} alt="Certificate Full View" className="certificate-full" />
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

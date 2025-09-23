@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import CertificateCard from "./CertificateCard"; // adjust path as needed
 import "./About.css";
 import Navbar from "./Navbar";
-import logo from "../assets/logo.png"; // replace with your own profile image
+import logo from "../assets/logo.png";
+import ccyber from "../assets/ccyber.png";
+import python from "../assets/python.png";
+import hacking from "../assets/hacking.png";
+import programming from "../assets/programming.png";
+import cpython from "../assets/cpython.png"; // replace with your own profile image
 import { FaHtml5, FaCss3Alt, FaSass, FaJs, FaReact, FaNodeJs, FaPython, FaGithub } from "react-icons/fa";
 import { SiTailwindcss, SiTypescript, SiNextdotjs, SiSupabase } from "react-icons/si";
 
@@ -132,12 +137,42 @@ const About = () => {
 
           {activeTab === "achievements" && (
             <div className="tab-content fade-in">
-              <div className="certificates-grid">
-                <CertificateCard />
-                <CertificateCard />
-                <CertificateCard />
-                <CertificateCard />
-              </div>
+              <section className="certificates-section">
+      <h1>My Certificates</h1>
+      <div className="certificates-grid">
+        <CertificateCard
+          image={cpython}
+          name="Kudzai Nicholas"
+          title="CISCO Python Essentials 1"
+          link="https://www.credly.com/badges/e98efbda-6bf5-4811-bcdc-9af86a61bea2"
+        />
+        <CertificateCard
+          image={ccyber}
+          name="Kudzai Nicholas"
+          title="CISCO Introduction to Cybersecurity"
+          link="https://www.credly.com/badges/282ced2c-065b-4425-aaf9-4222bf005cea"
+        />
+
+        <CertificateCard
+          image={hacking}
+          name="Kudzai Nicholas"
+          title="CISCO Ethical Hacking"
+          link="https://www.credly.com/badges/282ced2c-065b-4425-aaf9-4222bf005cea"
+        />
+        <CertificateCard
+          image={programming}
+          name="Kudzai Nicholas"
+          title="Kaggle Introduction to Programming"
+        
+        />
+         <CertificateCard
+          image={python}
+          name="Kudzai Nicholas"
+          title="Kaggle Python"
+        
+        />
+      </div>
+    </section>
             </div>
           )}
         </div>

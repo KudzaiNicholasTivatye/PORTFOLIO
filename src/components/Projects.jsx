@@ -1,25 +1,32 @@
 import React from "react";
 import { FaReact, FaJs, FaHtml5 } from "react-icons/fa"; // example tech icons
-import {  SiTailwindcss ,SiFirebase } from "react-icons/si";
+import { SiTailwindcss, SiFirebase } from "react-icons/si";
 import "./projects.css";
-import logo from "../assets/logo.png"; 
-
+import Navbar from "./Navbar";
+import logo from "../assets/logo.png";
+import kk from "../assets/kk.jpg";
 
 const projects = [
   {
     title: "InsightPress - Share Your Thoughts.",
     description:
       "InsightPress is a news platform where users can search for the latest news, log in with Google, and engage in public discussions. Users can comment on articles, reply to others, and be part of a community that values open dialogue and shared perspectives.",
-    image: ["../assets/logo.png"], // screenshot of project
-    technologies: [<SiFirebase />, <FaReact />, <SiTailwindcss />, <FaJs />, <FaHtml5 />],
+    image: logo, // screenshot of project
+    technologies: [
+      <SiFirebase key="firebase" />,
+      <FaReact key="react" />,
+      <SiTailwindcss key="tailwind" />,
+      <FaJs key="js" />,
+      <FaHtml5 key="html" />,
+    ],
     liveLink: "https://yourprojectlink.com",
   },
   {
     title: "Another Project",
     description:
       "This is another project with some cool features and design.",
-    image: "/assets/logo.png",
-    technologies: [<FaReact />, <FaJs />],
+    image: kk,
+    technologies: [<FaReact key="react" />, <FaJs key="js" />],
     liveLink: "https://anotherproject.com",
   },
   {
@@ -27,7 +34,7 @@ const projects = [
     description:
       "A third example project showcasing more functionality and creativity.",
     image: "/assets/logo3.png",
-    technologies: [<SiTailwindcss />, <FaHtml5 />],
+    technologies: [<SiTailwindcss key="tailwind" />, <FaHtml5 key="html" />],
     liveLink: "https://thirdproject.com",
   },
 ];
@@ -35,6 +42,21 @@ const projects = [
 const Projects = () => {
   return (
     <section className="projects-section">
+
+      {/* Navbar */}
+      <Navbar/>
+    
+     {/* Section Intro */}
+      <div className="projects-intro">
+        <h1 className="projects-title">My Projects</h1>
+        <p className="projects-subtitle">
+          Here’s a selection of projects I’ve built, showcasing my skills in
+          front-end and back-end development. Each project reflects creativity,
+          problem-solving, and clean design principles.
+        </p>
+      </div>
+
+      {/* Projects List */}
       {projects.map((project, index) => (
         <div className="project-card" key={index}>
           {/* LEFT SIDE */}
