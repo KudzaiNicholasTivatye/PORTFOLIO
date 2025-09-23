@@ -14,7 +14,9 @@ export default function Hero() {
 
 
       {/* Left Social Icons */}
-      <div className="social-sidebar">
+      
+  <div className="social-sidebar">
+        <span className="glow-line"></span>
         <a
           href="https://www.linkedin.com/in/kudzai-nicholas-tivatye-00498533a"
           target="_blank"
@@ -22,6 +24,7 @@ export default function Hero() {
         >
           <FaLinkedin className="social-icon" />
         </a>
+        <span className="glow-line"></span>
         <a
           href="https://github.com/yourusername"
           target="_blank"

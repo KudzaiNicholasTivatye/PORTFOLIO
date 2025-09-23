@@ -145,4 +145,88 @@
   text-shadow: 0 0 10px #00ffff;
 }
 
-/* Button Background */
+
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .header-left {
+    left: 60px;
+    max-width: 90vw;
+  }
+  .portfolio-logo {
+    height: 70px;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-header {
+    padding: 6px 10px;
+  }
+  .portfolio-logo {
+    height: 50px;
+  }
+ 
+
+
+  .social-sidebar {
+    position: absolute;      /* Absolutely position for overlay */
+    left: 0;
+    right: 0;
+    top: 65vh;               /* Adjust this value to move it further down */
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    gap: 18px;
+    margin: 0;
+    z-index: 20;
+  }
+
+  .glow-line {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, #00ffff, #00ffff00);
+    box-shadow: 0 0 10px #00ffff;
+    margin: 0 10px;
+    border-radius: 2px;
+    display: inline-block;
+  }
+
+
+  .header-left {
+    left: 0;
+    right: 0;
+    top: 35%;
+    transform: translateY(-50%);
+    max-width: 98vw;
+    padding: 0 10px;
+    align-items: center;
+    text-align: center;
+  }
+  .welcome-text {
+    font-size: 1.1rem;
+  }
+  .hero-name {
+    font-size: 1.5rem;
+  }
+  .hero-tagline {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .portfolio-logo {
+    height: 36px;
+  }
+  .header-left {
+    padding: 0 2vw;
+  }
+  .welcome-text,
+  .hero-tagline {
+    font-size: 1rem;
+  }
+  .hero-name {
+    font-size: 1.1rem;
+  }
+}

@@ -164,3 +164,83 @@
   background: #40916c;
 }
 
+
+
+
+/* ===========================
+   MOBILE RESPONSIVENESS
+   =========================== */
+@media (max-width: 600px) {
+  .certificates-grid {
+    flex-direction: column;
+    gap: 16px;
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .certificate-container {
+    width: 95vw;
+    min-width: 0;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+    border-radius: 14px;
+  }
+
+  .certificate-box {
+    margin-top: 40px;
+    height: 180px;
+    border-radius: 10px;
+    padding: 4px;
+  }
+
+  .certificate-img {
+    max-height: 140px;
+  }
+
+  .profile-card {
+    position: static;
+    margin-top: 10px;
+    border-radius: 30px;
+    padding: 6px 8px;
+    flex-direction: row;
+  }
+
+  .profile-img {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+  }
+
+  .profile-text h4 {
+    font-size: 13px;
+  }
+
+  .profile-text p {
+    font-size: 10px;
+  }
+
+  .arrow-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .join-btn {
+    top: 8px;
+    right: 8px;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .certificate-modal-content {
+    padding: 0.5rem;
+  }
+
+  .certificate-full {
+  
+    max-width: 98vw;
+    border-radius: 6px;
+  }
+}
