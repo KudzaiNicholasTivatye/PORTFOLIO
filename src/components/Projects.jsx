@@ -8,7 +8,7 @@ import kk from "../assets/kk.jpg";
 
 const projects = [
   {
-    title: "InsightPress - Share Your Thoughts.",
+    title: "Uncommon.org Attendance Tracker System",
     description:
       "InsightPress is a news platform where users can search for the latest news, log in with Google, and engage in public discussions. Users can comment on articles, reply to others, and be part of a community that values open dialogue and shared perspectives.",
     image: logo, // screenshot of project

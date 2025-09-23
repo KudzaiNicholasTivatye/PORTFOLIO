@@ -145,3 +145,91 @@
   border-radius: 12px;
   display: block;
 }
+
+
+@media (max-width: 700px) {
+  .projects-title {
+    font-size: 1.6rem;
+  }
+  .projects-subtitle {
+    font-size: 1rem;
+    max-width: 95vw;
+    padding: 0 0.5rem;
+  }
+  .projects-section {
+    gap: 2rem;
+    padding: 0 0.5rem;
+  }
+  .project-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding-left: 0;
+    padding-bottom: 2rem;
+  }
+ 
+  .project-info h2 {
+    font-size: 1.2rem;
+    max-width: 95vw;
+    padding: 0 0.5rem;
+    word-break: break-word;
+  }
+  .project-info h4 {
+    font-size: 0.98rem;
+    max-width: 95vw;
+    padding: 0 0.5rem;
+    word-break: break-word;
+  }
+    .project-info p {
+    font-size: 0.95rem;
+    max-width: 95vw;      /* Ensure it doesn't overflow */
+    padding: 0 0.5rem;    /* Add side padding for breathing room */
+    word-break: break-word;
+  }
+ 
+   .tech-icons {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;   /* Center the tech icons */
+    width: 100%;
+    margin: 1rem 0 0.5rem 0;
+  }
+
+  .project-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding-left: 0;
+    padding-bottom: 2rem;
+    width: 100%;
+  }
+
+   .project-preview {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .btn-live {
+    display: block;
+    width: fit-content;
+    margin: 1.2rem auto 0 auto; /* Center the button under the image */
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 10px;
+  }
+  
+}
+ 
+  .preview-frame {
+    max-width: 98vw;
+    padding: 0.5rem;
+    border-radius: 12px;
+  }
+  .preview-frame img {
+    border-radius: 8px;
+  }
+}
