@@ -109,6 +109,59 @@
   color: #0a0f2c;
 }
 
+
+/* ===========================
+   RESPONSIVENESS
+   =========================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .about-text h2 {
+    font-size: 1.75rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .about-image img {
+    width: 180px; /* ✅ smaller image */
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .about-container {
+    gap: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  .about-image img {
+    width: 150px; /* ✅ shrink further */
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+    max-width: 95vw;    /* Allow text to use almost the full viewport width */
+    margin: 0 0.5rem;   /* Small side margins for breathing room */
+    line-height: 1.6;
+    word-break: break-word;
+  }
+
+  .btn {
+  
+    text-align: center;
+  }
+  
+}
+
+
+
 /* ===========================
    EXPERIENCE SECTION
    =========================== */
@@ -298,18 +351,29 @@
     flex-direction: column;
   }
 
-  .timeline-left {
-    text-align: left;
-    border-right: none;
-    border-left: 2px solid rgba(255, 255, 255, 0.1);
-    padding-left: 1.5rem;
+
+   .timeline-left {
+    text-align: center;    /* Center all text */
+    border-right: none;    /* Remove right border */
+    border-left: none;     /* Remove left border if present */
+    margin-left: 4rem;
+    margin-right: 0;
     padding-right: 0;
+    padding-left: 0;
   }
 
-  .timeline-left::after {
-    left: -7px;
-    right: auto;
+.timeline-left::after {
+    display: none;         /* Hide the timeline dot if you want a cleaner look */
   }
+
+  .timeline-right p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #d0d0d0;
+  margin-bottom: 1rem;
+  margin-right: 0;      /* Remove the large right margin */
+  text-align: center;   /* Center the text */
+}
 }
 
 /*responsive for timeline and experience*/
@@ -411,6 +475,13 @@
   .tech-grid {
     grid-template-columns: repeat(3, 1fr); /* 3 per row on tablets */
   }
+   .tech-card {
+    padding: 15px 8px;      /* Smaller padding */
+  }
+  .icon {
+    font-size: 25px;        /* Smaller icon */
+  }
+ 
 }
 
 @media (max-width: 600px) {
