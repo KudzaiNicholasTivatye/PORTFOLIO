@@ -40,7 +40,15 @@ const About = () => {
             {/* Buttons */}
             <div className="about-buttons">
               <button className="btn hire">HIRE ME</button>
-              <button className="btn resume">RESUME</button>
+             <a
+              className="btn resume"
+              href="/resume.pdf"
+              
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              RESUME
+            </a>
             </div>
           </div>
         </div>
