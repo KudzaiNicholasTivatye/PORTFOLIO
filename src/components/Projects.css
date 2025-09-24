@@ -138,6 +138,7 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
   overflow: hidden;
   max-width: 600px;
+  margin-right: 100px;
 }
 
 .preview-frame img {
@@ -222,7 +223,7 @@
     border-radius: 10px;
   }
   
-}
+
  
   .preview-frame {
     max-width: 98vw;

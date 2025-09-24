@@ -1,39 +1,41 @@
 import React from "react";
-import { FaReact, FaJs, FaHtml5 } from "react-icons/fa"; // example tech icons
-import { SiTailwindcss, SiFirebase } from "react-icons/si";
+import { FaReact, FaJs, FaHtml5, FaCss3Alt } from "react-icons/fa"; // example tech icons
+import { SiTailwindcss, SiFirebase, SiSupabase, SiTypescript, SiNextdotjs } from "react-icons/si";
 import "./projects.css";
 import Navbar from "./Navbar";
-import logo from "../assets/logo.png";
-import kk from "../assets/kk.jpg";
+import cm from "../assets/cm.jpeg";
+import creative  from "../assets/creative.png";
+import uncommon from "../assets/uncommon.png";
 
 const projects = [
   {
     title: "Uncommon.org Attendance Tracker System",
     description:
-      "InsightPress is a news platform where users can search for the latest news, log in with Google, and engage in public discussions. Users can comment on articles, reply to others, and be part of a community that values open dialogue and shared perspectives.",
-    image: logo, // screenshot of project
+      "We developed an attendance tracker for Uncommon that records student and staff check-ins and checkouts, featuring a secure distance radius system to ensure users can only sign in within designated locations.",
+    image: uncommon, // screenshot of project
     technologies: [
-      <SiFirebase key="firebase" />,
-      <FaReact key="react" />,
+      <SiSupabase key="supabase" />,
+      <SiTypescript key="typescript" />,
       <SiTailwindcss key="tailwind" />,
-      <FaJs key="js" />,
-      <FaHtml5 key="html" />,
+      <SiNextdotjs key="iconnext" />
+    
+    
     ],
     liveLink: "https://yourprojectlink.com",
   },
   {
-    title: "Another Project",
+    title: "Creative Journey",
     description:
-      "This is another project with some cool features and design.",
-    image: kk,
-    technologies: [<FaReact key="react" />, <FaJs key="js" />],
+      "I developed a modern, professional website for Creative Journey, a marketing agency, ensuring their brand is accessible online. The platform highlights services, strengthens digital presence, and provides clients with a seamless, engaging experience.",
+    image: creative,
+    technologies: [<FaReact key="react" />, <FaCss3Alt key="Css3Alt" />],
     liveLink: "https://anotherproject.com",
   },
   {
-    title: "Third Project",
+    title: "CM Logistics Shipping Website",
     description:
-      "A third example project showcasing more functionality and creativity.",
-    image: "/assets/logo3.png",
+      "We designed a professional website for CM Logistics, a shipping company in China, ensuring global online presence. The site showcases services, supports international clients, and highlights their expertise in worldwide goods transportation..",
+    image: cm,
     technologies: [<SiTailwindcss key="tailwind" />, <FaHtml5 key="html" />],
     liveLink: "https://thirdproject.com",
   },
