@@ -3,7 +3,7 @@ import CertificateCard from "./CertificateCard"; // adjust path as needed
 import "./About.css";
 import Navbar from "./Navbar";
 import logo from "../assets/logo.png";
-import "../assets/cyber.png";
+import cert from "../assets/cert.png";
 import python from "../assets/python.png";
 import hacking from "../assets/hacking.png";
 import programming from "../assets/programming.png";
