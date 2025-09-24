@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaHome, FaUser, FaFolderOpen, FaEnvelope } from "react-icons/fa";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const location = useLocation();
+  const [open, setOpen] = useState(false);
 
   const menuItems = [
     { label: "Home", icon: <FaHome />, path: "/" },
@@ -13,31 +13,36 @@ const Navbar = () => {
     { label: "Contact", icon: <FaEnvelope />, path: "/contact" },
   ];
 
-  // find the active index by comparing the current location
-  const activeIndex = menuItems.findIndex((item) => item.path === location.pathname);
-
   return (
     <nav className="navbar">
-      <ul className="nav-list">
-        {/* Pill indicator */}
-        <div
-          className="nav-indicator"
-          style={{
-            left: `${(100 / menuItems.length) * activeIndex}%`,
-            width: `${100 / menuItems.length}%`,
-          }}
-        />
+      {/* Hamburger for mobile */}
+      <button
+        className="hamburger"
+        onClick={() => setOpen((prev) => !prev)}
+        aria-label="Toggle navigation"
+      >
+        <span className="hamburger-bar"></span>
+        <span className="hamburger-bar"></span>
+        <span className="hamburger-bar"></span>
+      </button>
+
+      <ul className={`nav-list${open ? " open" : ""}`}>
         {menuItems.map((item, index) => (
-          <li
-            key={index}
-            className={`nav-item ${activeIndex === index ? "active" : ""}`}
-          >
-            <Link to={item.path} className="nav-link">
+          <li key={index} className="nav-item">
+            <NavLink
+              to={item.path}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "active" : ""}`
+              }
+              onClick={() => setOpen(false)} // Close mobile menu on click
+            >
               <span className="nav-icon">{item.icon}</span>
               {item.label}
-            </Link>
+            </NavLink>
           </li>
         ))}
+        {/* Desktop sliding pill indicator */}
+        <li className="nav-indicator" />
       </ul>
     </nav>
   );

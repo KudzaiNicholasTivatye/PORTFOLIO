@@ -197,9 +197,9 @@ body, .projects-section {
    .tech-icons {
     gap: 0.5rem;
     flex-wrap: wrap;
-    justify-content: center;   /* Center the tech icons */
     width: 100%;
     margin: 1rem 0 0.5rem 0;
+    margin-left: 10px;
   }
 
   .project-card {
@@ -235,6 +235,7 @@ body, .projects-section {
     max-width: 98vw;
     padding: 0.5rem;
     border-radius: 12px;
+    margin-left: 100px ;
   }
   .preview-frame img {
     border-radius: 8px;

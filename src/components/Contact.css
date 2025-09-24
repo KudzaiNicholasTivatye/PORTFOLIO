@@ -1,11 +1,18 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 .contact-section {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  
+  padding-bottom: 30px;
   background: linear-gradient(135deg, #101635, #0c0c2c);
   color: #fff;
-  gap: 40px;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
@@ -13,6 +20,7 @@
 .contact-info {
   flex: 1;
   max-width: 500px;
+  padding-left: 100px;
 }
 
 .contact-info h2 {
@@ -61,12 +69,12 @@
 
 /* Right Form */
 .contact-form {
-  flex: 1;
+ margin-right: 100px;
   background: #0f1636;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  min-width: 320px;
+  min-width: 500px;
 }
 
 .contact-form h3 {

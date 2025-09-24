@@ -10,6 +10,7 @@ import Contact from "./components/Contact"
 
 const App = () => {
   return (
+    
     <Router>
       {/* Navbar stays visible across all pages */}
       
