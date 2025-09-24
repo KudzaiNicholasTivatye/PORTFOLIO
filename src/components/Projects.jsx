@@ -1,7 +1,7 @@
 import React from "react";
 import { FaReact, FaJs, FaHtml5, FaCss3Alt } from "react-icons/fa"; // example tech icons
 import { SiTailwindcss, SiFirebase, SiSupabase, SiTypescript, SiNextdotjs } from "react-icons/si";
-import "./projects.css";
+import "./Projects.css";
 import Navbar from "./Navbar";
 import cm from "../assets/cm.jpeg";
 import creative  from "../assets/creative.png";
@@ -29,7 +29,7 @@ const projects = [
       "I developed a modern, professional website for Creative Journey, a marketing agency, ensuring their brand is accessible online. The platform highlights services, strengthens digital presence, and provides clients with a seamless, engaging experience.",
     image: creative,
     technologies: [<FaReact key="react" />, <FaCss3Alt key="Css3Alt" />],
-    liveLink: "https://anotherproject.com",
+    liveLink: "https://creative-journey-dtoz.vercel.app/",
   },
   {
     title: "CM Logistics Shipping Website",
