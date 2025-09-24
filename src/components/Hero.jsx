@@ -26,7 +26,7 @@ export default function Hero() {
         </a>
         <span className="glow-line"></span>
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/KudzaiNicholasTivatye"
           target="_blank"
           rel="noopener noreferrer"
         >

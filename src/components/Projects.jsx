@@ -1,5 +1,5 @@
 import React from "react";
-import { FaReact, FaJs, FaHtml5, FaCss3Alt } from "react-icons/fa"; // example tech icons
+import { FaReact, FaJs, FaHtml5, FaCss3Alt,  FaSass } from "react-icons/fa"; // example tech icons
 import { SiTailwindcss, SiFirebase, SiSupabase, SiTypescript, SiNextdotjs } from "react-icons/si";
 import "./Projects.css";
 import Navbar from "./Navbar";
@@ -36,8 +36,8 @@ const projects = [
     description:
       "We designed a professional website for CM Logistics, a shipping company in China, ensuring global online presence. The site showcases services, supports international clients, and highlights their expertise in worldwide goods transportation..",
     image: cm,
-    technologies: [<SiTailwindcss key="tailwind" />, <FaHtml5 key="html" />],
-    liveLink: "https://thirdproject.com",
+    technologies: [  <SiNextdotjs key="iconnext" /> ,<SiTypescript key="typescript" />, <FaSass key="sass" />],
+    liveLink: "https://thelogisticsshippers.netlify.app/",
   },
 ];
 

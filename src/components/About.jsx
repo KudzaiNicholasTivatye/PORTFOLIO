@@ -34,9 +34,7 @@ const About = () => {
           <div className="about-text">
             <h2>ABOUT ME</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s.
+             I am a passionate software developer and cybersecurity enthusiast. I thrive on solving complex problems, optimizing digital strategies, and exploring the intersection of technology and business. My adaptability allows me to balance technical precision with creativity, whether through storytelling, visual communication, or digital marketing insights. Music fuels my creativity, and I embrace every opportunity to learn and grow. Driven by a vision for Zimbabwe’s tech future, I aim to contribute to its transformation into Africa’s tech capital. Let’s connect and innovate together!
             </p>
 
             {/* Buttons */}
@@ -138,7 +136,7 @@ const About = () => {
           {activeTab === "achievements" && (
             <div className="tab-content fade-in">
               <section className="certificates-section">
-      <h1>My Certificates</h1>
+      
       <div className="certificates-grid">
         <CertificateCard
           image={py}
@@ -147,7 +145,7 @@ const About = () => {
           link="https://www.credly.com/badges/e98efbda-6bf5-4811-bcdc-9af86a61bea2"
         />
         <CertificateCard
-          image={cyber}
+          image={cert}
           name="Kudzai Nicholas"
           title="CISCO Introduction to Cybersecurity"
           link="https://www.credly.com/badges/282ced2c-065b-4425-aaf9-4222bf005cea"

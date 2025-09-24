@@ -2,41 +2,45 @@ import React from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 import "./Contact.css";
 
 const Contact = () => {
   return (
     <section className="contact-section">
+     
+       {/* Navbar*/}
+       <Navbar/>
+
+
       {/* Left Side */}
       <div className="contact-info">
         <h2>CONTACT</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex.
+         "I’m always excited to connect, collaborate, and bring ideas to life together. Let’s work on something amazing!"
         </p>
 
         <div className="info-block">
           <h4>Address</h4>
-          <p>123, Sample Street, Harare, Zimbabwe</p>
+          <p> 54 Barbra Tredgold Circle, Mbare , Harare, Zimbabwe</p>
         </div>
 
         <div className="info-block">
           <h4>Phone</h4>
-          <p>+263 77 123 4567</p>
+          <p>+263 780 518 264</p>
+           <p>+263 717 113 870</p>
         </div>
 
         <div className="info-block">
           <h4>Email</h4>
-          <p>youremail@example.com</p>
+          <p>kudziet221@gmail.com</p>
         </div>
 
         <div className="social-icons">
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+          <a href="https://www.linkedin.com/in/kudzai-nicholas-tivatye-00498533a" target="_blank" rel="noreferrer">
             <FaLinkedin />
           </a>
-          <a href="https://github.com" target="_blank" rel="noreferrer">
+          <a href="https://github.com/KudzaiNicholasTivatye" target="_blank" rel="noreferrer">
             <FaGithub />
           </a>
         </div>
