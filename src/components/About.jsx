@@ -3,7 +3,7 @@ import CertificateCard from "./CertificateCard"; // adjust path as needed
 import "./About.css";
 import Navbar from "./Navbar";
 import logo from "../assets/logo.png";
-import ccyber from "../assets/ccyber.png";
+import cyber from "../assets/cyber.png";
 import python from "../assets/python.png";
 import hacking from "../assets/hacking.png";
 import programming from "../assets/programming.png";
@@ -147,7 +147,7 @@ const About = () => {
           link="https://www.credly.com/badges/e98efbda-6bf5-4811-bcdc-9af86a61bea2"
         />
         <CertificateCard
-          image={ccyber}
+          image={cyber}
           name="Kudzai Nicholas"
           title="CISCO Introduction to Cybersecurity"
           link="https://www.credly.com/badges/282ced2c-065b-4425-aaf9-4222bf005cea"
