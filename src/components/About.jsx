@@ -4,10 +4,10 @@ import "./About.css";
 import Navbar from "./Navbar";
 import logo from "../assets/logo.png";
 import cert from "../assets/cert.png";
-import py from "../assets/py.png";
+import python from "../assets/python.png";
 import hacking from "../assets/hacking.png";
 import programming from "../assets/programming.png";
-import cpython from "../assets/cpython.png"; // replace with your own profile image
+import py from "../assets/py.png"; // replace with your own profile image
 import { FaHtml5, FaCss3Alt, FaSass, FaJs, FaReact, FaNodeJs, FaPython, FaGithub } from "react-icons/fa";
 import { SiTailwindcss, SiTypescript, SiNextdotjs, SiSupabase } from "react-icons/si";
 
@@ -141,7 +141,7 @@ const About = () => {
       <h1>My Certificates</h1>
       <div className="certificates-grid">
         <CertificateCard
-          image={cpython}
+          image={py}
           name="Kudzai Nicholas"
           title="CISCO Python Essentials 1"
           link="https://www.credly.com/badges/e98efbda-6bf5-4811-bcdc-9af86a61bea2"
@@ -166,7 +166,7 @@ const About = () => {
         
         />
          <CertificateCard
-          image={py}
+          image={python}
           name="Kudzai Nicholas"
           title="Kaggle Python"
         
