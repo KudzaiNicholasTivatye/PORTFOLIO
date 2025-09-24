@@ -4,7 +4,7 @@ import "./About.css";
 import Navbar from "./Navbar";
 import logo from "../assets/logo.png";
 import cert from "../assets/cert.png";
-import python from "../assets/python.png";
+import py from "../assets/py.png";
 import hacking from "../assets/hacking.png";
 import programming from "../assets/programming.png";
 import cpython from "../assets/cpython.png"; // replace with your own profile image
@@ -166,7 +166,7 @@ const About = () => {
         
         />
          <CertificateCard
-          image={python}
+          image={py}
           name="Kudzai Nicholas"
           title="Kaggle Python"
         
