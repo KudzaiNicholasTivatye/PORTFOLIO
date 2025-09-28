@@ -21,7 +21,7 @@ const projects = [
     
     
     ],
-    liveLink: "https://yourprojectlink.com",
+    liveLink: "http://attendance-tracker-frontenf-eight.vercel.app/",
   },
   {
     title: "Creative Journey",
