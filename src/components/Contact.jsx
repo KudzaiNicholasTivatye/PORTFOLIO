@@ -4,8 +4,56 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import "./Contact.css";
+import { useState } from "react";
 
 const Contact = () => {
+ const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false); // 🔹 Loading state
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true); // 🔹 Start loading
+
+    try {
+      const response = await fetch("http://localhost:5000/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          to: "your_receiver_email@gmail.com",
+          subject: `New message from ${formData.name}`,
+          message: `
+            Name: ${formData.name}
+            Email: ${formData.email}
+            Phone: ${formData.phone}
+
+            Message:
+            ${formData.message}
+          `,
+        }),
+      });
+
+      const result = await response.json();
+      alert(result.message);
+
+      // Reset form after success
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } catch (error) {
+      alert("Error sending email: " + error);
+    } finally {
+      setLoading(false); // 🔹 Stop loading
+    }
+  };
+
   return (
     <section className="contact-section">
      
@@ -47,16 +95,46 @@ const Contact = () => {
       </div>
 
       {/* Right Side - Contact Form */}
-      <div className="contact-form">
-        <h3>GET IN TOUCH</h3>
-        <form>
-          <input type="text" placeholder="Name" required />
-          <input type="email" placeholder="Email" required />
-          <input type="text" placeholder="Phone number" />
-          <textarea placeholder="Message" rows="4"></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
+       <div className="contact-form">
+     <h3>GET IN TOUCH</h3>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          required
+          value={formData.name}
+          onChange={handleChange}
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+          value={formData.email}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="phone"
+          placeholder="Phone number"
+          value={formData.phone}
+          onChange={handleChange}
+        />
+        <textarea
+          name="message"
+          placeholder="Message"
+          rows="4"
+          required
+          value={formData.message}
+          onChange={handleChange}
+        ></textarea>
+        <button type="submit" disabled={loading}>
+          {loading ? "Sending..." : "Send Message"} {/* 🔹 Show loading text */}
+        </button>
+      </form>
+    </div>
+      
     </section>
   );
 };
